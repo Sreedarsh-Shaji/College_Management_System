@@ -3,7 +3,7 @@ com\institutemgmt\main\repository\TeacherRepository.class
 com\institutemgmt\main\controllers\AdminController.class
 com\institutemgmt\main\entites\Teacher.class
 com\institutemgmt\main\repository\ParentRepository.class
-com\institutemgmt\main\swaggerconfig\RootController.class
+com\institutemgmt\main\swaggerconfiig\SwaggerConfig.class
 com\institutemgmt\main\entites\Parent.class
 com\institutemgmt\main\services\StudentService.class
 com\institutemgmt\main\entites\Student.class
@@ -14,6 +14,5 @@ com\institutemgmt\main\controllers\TeacherController.class
 com\institutemgmt\main\entites\Admin.class
 com\institutemgmt\main\services\AdminService.class
 com\institutemgmt\main\services\TeacherService.class
-com\institutemgmt\main\swaggerconfig\SpringFoxConfig.class
 com\institutemgmt\main\repository\AdminRepository.class
 com\institutemgmt\main\controllers\StudentController.class

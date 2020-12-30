@@ -1,19 +1,18 @@
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\main.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\repository\ParentRepository.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\StudentController.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\services\ParentService.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\TeacherController.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\services\TeacherService.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Parent.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\repository\AdminRepository.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\AdminController.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\ParentController.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\swaggerconfig\RootController.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Admin.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\swaggerconfig\SpringFoxConfig.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\repository\StudentRepository.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\repository\TeacherRepository.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Student.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\services\AdminService.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\services\StudentService.java
-D:\Self Training and others\Spring\Get Started Immediately\Project\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Teacher.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\ParentService.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\swaggerconfiig\SwaggerConfig.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\AdminController.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\ParentRepository.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\ParentController.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\TeacherService.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Admin.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\StudentRepository.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Teacher.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\TeacherController.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\StudentController.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Parent.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\AdminRepository.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Student.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\main.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\AdminService.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\TeacherRepository.java
+D:\Fariz Network\2020\College Management System\Details\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\StudentService.java
