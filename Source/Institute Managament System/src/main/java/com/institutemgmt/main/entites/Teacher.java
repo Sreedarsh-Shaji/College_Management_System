@@ -5,32 +5,56 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 public class Teacher {
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int teacher_id;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String name;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String user_name;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String password;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String email;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     Date dob;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String phone_no;
+
+    @Getter
+    @Setter
+    int department;
+
+    @Getter
+    @Setter
+    @ManyToOne
+    List<Subject> subjects;
+
+    @Getter
+    @Setter
+    int staffId;
 
 }

@@ -16,21 +16,34 @@ import java.util.Date;
 @AllArgsConstructor
 public class Student {
 
-    @Getter @Setter
+    @Getter
+    @Setter
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int student_id;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String name;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String user_name;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String password;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String email;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     Date dob;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String phone_no;
 
 }

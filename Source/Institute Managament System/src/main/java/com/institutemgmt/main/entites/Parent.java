@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -20,17 +17,34 @@ public class Parent {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int parent_id;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String name;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String user_name;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String password;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String email;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     Date dob;
-    @Getter @Setter
+
+    @Getter
+    @Setter
     String phone_no;
+
+    @Getter
+    @Setter
+    @OneToOne
+    Student student;
 
 }

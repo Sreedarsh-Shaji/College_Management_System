@@ -13,17 +13,17 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@Api(value = "hello", description = "Sample hello world application")
+@Api(description = "Sample hello world application")
 @RequestMapping(value = "api/v1")
 public class AdminController {
 
     @Autowired
     private AdminService service;
 
-    @RequestMapping(method = RequestMethod.GET,value = "/intro")
+    @RequestMapping(method = RequestMethod.GET,value = "/hello")
     public String hello()
     {
-        return "Welcome to the Institute management system!!!";
+        return "Welcome to the Institute management system1233!!!";
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "/admin/all")
@@ -47,8 +47,6 @@ public class AdminController {
         return service.updatePassword(mail,password);
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "My App Service get test1 API", position = 1)
     @RequestMapping(method = RequestMethod.PUT,value = "/admin/resetpass/{mail}")
     public void resetAdminPassword(@PathVariable("mail") String mail)
     {
