@@ -1,17 +1,16 @@
 package com.institutemgmt.main.entites;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
+@ToString
 public class Teacher {
 
     @Getter
@@ -50,11 +49,26 @@ public class Teacher {
 
     @Getter
     @Setter
-    @ManyToOne
-    List<Subject> subjects;
+    @ElementCollection
+    List<Integer> subjects;
 
     @Getter
     @Setter
     int staffId;
 
+    public Teacher(int teacher_id, String name, String user_name, String password, String email, Date dob, String phone_no, int department, List<Integer> subjects, int staffId) {
+        this.teacher_id = teacher_id;
+        this.name = name;
+        this.user_name = user_name;
+        this.password = password;
+        this.email = email;
+        this.dob = dob;
+        this.phone_no = phone_no;
+        this.department = department;
+        this.subjects = subjects;
+        this.staffId = staffId;
+    }
+
+    public Teacher() {
+    }
 }

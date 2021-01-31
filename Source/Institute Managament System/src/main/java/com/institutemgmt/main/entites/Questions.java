@@ -20,8 +20,7 @@ public class Questions {
 
     @Getter
     @Setter
-    @OneToMany
-    Test test;
+    int test;
 
     @Getter
     @Setter

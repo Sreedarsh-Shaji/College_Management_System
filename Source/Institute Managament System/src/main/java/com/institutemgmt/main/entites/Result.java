@@ -23,7 +23,7 @@ public class Result {
 
     @Getter
     @Setter
-    Examination exam;
+    int exam;
 
     @Getter
     @Setter
@@ -31,7 +31,7 @@ public class Result {
 
     @Getter
     @Setter
-    Student student;
+    int student;
 
     @Getter
     @Setter

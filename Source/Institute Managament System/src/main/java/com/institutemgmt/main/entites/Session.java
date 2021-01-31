@@ -23,15 +23,15 @@ public class Session {
 
     @Getter
     @Setter
-    Teacher teacher;
+    int teacher;
 
     @Getter
     @Setter
-    Classes cls;
+    int cls;
 
     @Getter
     @Setter
-    String classType;
+    int classType;
 
     @Getter
     @Setter

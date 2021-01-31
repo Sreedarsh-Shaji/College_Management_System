@@ -36,10 +36,4 @@ public class Examination {
     @Setter
     int noOfTests;
 
-    @Getter
-    @Setter
-    @ManyToOne
-    List<Test> tests;
-
-
 }

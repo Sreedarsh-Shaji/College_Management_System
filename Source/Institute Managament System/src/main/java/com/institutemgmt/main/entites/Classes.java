@@ -24,13 +24,11 @@ public class Classes {
 
     @Getter
     @Setter
-    @OneToOne
-    Department department;
+    int department;
 
     @Getter
     @Setter
-    @OneToOne
-    Teacher classTeacher;
+    int classTeacher;
 
     @Getter
     @Setter

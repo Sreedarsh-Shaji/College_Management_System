@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "College_dept")
 public class Department {
 
     @Getter

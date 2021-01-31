@@ -13,8 +13,8 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@Api(description = "Sample hello world application")
-@RequestMapping(value = "api/v1")
+@Api("Admin controller")
+@RequestMapping(value = "api/v1/admin")
 public class AdminController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class AdminController {
         return "Welcome to the Institute management system1233!!!";
     }
 
-    @RequestMapping(method = RequestMethod.GET,value = "/admin/all")
+    @RequestMapping(method = RequestMethod.GET,value = "/all")
     public List allAdmins()
     {
         return service.getAllAdmin();
