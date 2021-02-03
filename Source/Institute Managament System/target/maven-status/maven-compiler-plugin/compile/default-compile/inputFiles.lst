@@ -3,13 +3,18 @@ D:\Fariz Network\2020\College Management System\Source\Institute Managament Syst
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\TeacherRoles.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\main.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\StudentService.java
+D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\ClassService.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\TeacherRepository.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Feedback.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Examination.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Student.java
+D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\ClassRepository.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\ParentService.java
+D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\AssignmentRepository.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\ParentRepository.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Attendance.java
+D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\AssignmentService.java
+D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\v2\ClassesController.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Classes.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Questions.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Test.java
@@ -24,6 +29,7 @@ D:\Fariz Network\2020\College Management System\Source\Institute Managament Syst
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\services\AdminService.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Department.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\AdminController.java
+D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\v2\AssignmentController.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\repository\StudentRepository.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\entites\Admin.java
 D:\Fariz Network\2020\College Management System\Source\Institute Managament System\src\main\java\com\institutemgmt\main\controllers\ParentController.java

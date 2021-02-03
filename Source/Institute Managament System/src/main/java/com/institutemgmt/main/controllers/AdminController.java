@@ -23,7 +23,7 @@ public class AdminController {
     @RequestMapping(method = RequestMethod.GET,value = "/hello")
     public String hello()
     {
-        return "Welcome to the Institute management system1233!!!";
+        return "Welcome to the Institute management system!!!";
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "/all")
