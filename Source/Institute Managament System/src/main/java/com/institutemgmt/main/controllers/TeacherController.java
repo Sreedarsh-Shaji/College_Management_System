@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @Slf4j
 @RequestMapping(value = "api/v1/teacher")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class TeacherController {
 

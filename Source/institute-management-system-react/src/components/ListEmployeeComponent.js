@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
+import AddTeacher from './AddTeacher';
 
 class ListEmployeeComponent extends Component {
 
@@ -9,6 +10,8 @@ constructor(props){
     this.state = {
         employees : []
     }
+
+    this.AddTeacher = this.AddTeacher.bind(this);
 }
 
 componentDidMount(){
@@ -16,11 +19,22 @@ componentDidMount(){
         this.setState({ employees: res.data });
     });
 }
+
+AddTeacher(){
+    this.props.history.push('/add-teacher');//We have created a route that saves the history object and passes the history
+    //object as props to each class
+}
+
     render() {
         return (
             <div className="text-center">
                 
                 <h2>Employee List</h2>
+
+<div className="row">
+    <button className="btn btn-primary" onClick={this.AddTeacher}>AddTeacher</button>
+</div>
+
                 <div className = "row">
                     <table className="table table-striped table-bordered">
                         <thead>
