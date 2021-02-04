@@ -1,15 +1,13 @@
 package com.institutemgmt.main.entites;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Table(name = "College_dept")
 public class Department {
 

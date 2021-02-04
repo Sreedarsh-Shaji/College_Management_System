@@ -1,7 +1,9 @@
 package com.institutemgmt.main.services;
 
 import com.institutemgmt.main.entites.Assignment;
+import com.institutemgmt.main.entites.Department;
 import com.institutemgmt.main.repository.AssignmentRepository;
+import com.institutemgmt.main.repository.DepartmentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,39 +16,39 @@ import java.util.Optional;
 public class DepartmentService {
 
     @Autowired
-    AssignmentRepository repo;
+    DepartmentRepository repo;
 
-    public boolean addAssignment(Assignment assignment){
-        repo.save(assignment);
-        log.info("Assignment added");
+    public boolean addDepartment(Department department){
+        repo.save(department);
+        log.info("Department added");
         return true;
     }
 
-    public List<Assignment> getAllAssignment()
+    public List<Department> getAllDepartment()
     {
-        log.info("Reading all the assignment from the db");
+        log.info("Reading all the Department from the db");
         return repo.findAll();
     }
 
-    public Optional<Assignment> getAnAssignmentById(int id)
+    public Optional<Department> getAnDepartmentById(int id)
     {
-        log.info("Returning assignment with id "+id);
-        Optional<Assignment> t = repo.findById(id);
+        log.info("Returning department with id "+id);
+        Optional<Department> t = repo.findById(id);
         return t;
     }
 
-    public boolean deleteAnAssignmentById(int id)
+    public boolean deleteAnDepartmentById(int id)
     {
-        log.info("Deleting teacher with id "+id);
-        Optional<Assignment> t = repo.findById(id);
+        log.info("Deleting department with id "+id);
+        Optional<Department> t = repo.findById(id);
         repo.delete(t.orElse(null));
         return true;
     }
 
-    public boolean updateClasses(Assignment assignment)
+    public boolean updateClasses(Department department)
     {
-        log.info("Updating teacher "+ assignment);
-        repo.save(assignment);
+        log.info("Updating department "+ department);
+        repo.save(department);
         return true;
     }
 
