@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Virtual class</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!----webfonts--->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+<!---//webfonts--->  
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body id="login">
+  <div class="login-logo">
+  </div>
+  <h2 class="form-heading">login</h2>
+  <div class="app-cam" ng-app="postserviceApp" ng-controller="postserviceCtrl">
+	  <form>
+		<input type="text" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {
+      this.value = 'E-mail address';}" ng-model="name">
+		<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') 
+    {this.value = 'Password';}">
+		<div class="submit"><input type="submit" ng-click="postdata(username,password)" value="Login"></div>
+
+		<!-- ul class="new">
+			<li class="new_left"><p><a href="#">Forgot Password ?</a></p></li>
+			<li class="new_right"><p class="sign">New here ?<a href="register.html"> Sign Up</a></p></li>
+			<div class="clearfix"></div>
+		</ul-->
+	</form>
+      <p>Output Message : {{msg}}</p>
+  </div>
+   <div class="copy_layout login">
+      <p>Copyright &copy; 2015 Modern. All Rights Reserved | </p>
+   </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+var app = angular.module('postserviceApp', []);
+app.controller('postserviceCtrl', function ($scope, $http) {
+$scope.name = null;
+$scope.age = null;
+$scope.postdata = function (username,password) {
+var data = {
+  username: username,
+  password: password
+};
+
+//Call the services
+$http.post(`http://localhost:8082/api/v1/admin/admin/login/`+ username +`/`+ password 
+, JSON.stringify(data)).then(function (response) {
+if (response.data)
+$scope.msg = "Post Data Submitted Successfully!";
+}, function (response) {
+
+$scope.msg = "Service not Exists";
+//$scope.statusval = response.status;
+//$scope.statustext = response.statusText;
+$scope.headers = response.headers();
+});
+
+};
+
+});
+
+</script>

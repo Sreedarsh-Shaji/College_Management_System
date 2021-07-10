@@ -33,13 +33,13 @@ public class AdminController {
     }
 
     @RequestMapping(method = RequestMethod.GET,value = "/admin/login/{username}/{password}")
-    public boolean adminLogin(@PathVariable("username") String username ,@PathVariable("password") String password){
+    public String adminLogin(@PathVariable("username") String username ,@PathVariable("password") String password){
         List<Admin> results = null;
 
         results = service.getByUserPwd(username, password);
        if(results == null ) {service.getByMailPwd(username, password);}
 
-        return results.size()<=0?false:true;
+        return results.size()<=0?"false":"true";
     }
 
     @RequestMapping(method = RequestMethod.PUT,value = "/admin/updatepassword/{mail}/{password}")
