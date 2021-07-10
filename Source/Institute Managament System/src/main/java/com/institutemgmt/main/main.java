@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
- {"com.institutemgmt.main.controllers",
+@ComponentScan({"com.institutemgmt.main.controllers",
         "com.institutemgmt.main.controllers.v2",
         "com.institutemgmt.main.entites",
         "com.institutemgmt.main.repository",
