@@ -63,7 +63,7 @@ var data = {
 };
 
 //Call the services
-$http.post(`http://localhost:8082/api/v1/admin/admin/login/`+ username +`/`+ password 
+$http.get(`http://localhost:8082/api/v1/admin/admin/login/`, { username:username,password:password }
 , JSON.stringify(data)).then(function (response) {
 if (response.data)
 $scope.msg = "Post Data Submitted Successfully!";

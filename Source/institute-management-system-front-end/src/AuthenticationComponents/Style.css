@@ -1,0 +1,30 @@
+.login-style{
+    position: relative;
+    top: 200px;
+}
+
+.Signup-div
+{
+    border: solid 1px black;
+    padding: 20px;
+    background-color:blanchedalmond;
+    opacity: 0.8;
+}
+
+body{
+    background-image: url("https://s1.1zoom.me/big3/815/Coffee_Apples_Glasses_Laptops_Ballpoint_pen_571453_3000x2000.jpg");
+    background-size: cover;
+}
+
+.heading-div{
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    text-decoration: underline;
+}
+
+.failure-message{
+    position: relative;
+    top: 250px;
+}

@@ -1,8 +1,10 @@
-package com.institutemgmt.main.entites;
+package com.institutemgmt.main.DTO;
 
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
@@ -20,10 +22,5 @@ public class Department {
     @Getter
     @Setter
     String name;
-
-    @Getter
-    @Setter
-    @OneToOne
-    Teacher HOD;
 
 }

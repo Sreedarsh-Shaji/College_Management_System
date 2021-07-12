@@ -1,6 +1,6 @@
 package com.institutemgmt.main.controllers;
 
-import com.institutemgmt.main.entites.Teacher;
+import com.institutemgmt.main.DTO.Teacher;
 import com.institutemgmt.main.services.StudentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -1,4 +1,4 @@
-package DAO;
+package com.institutemgmt.main.DAO;
 
 import lombok.*;
 
@@ -6,7 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class SysytemStatus {
+public class SystemStatus {
     @Getter @Setter
     private int departmentNumber;
     @Getter @Setter

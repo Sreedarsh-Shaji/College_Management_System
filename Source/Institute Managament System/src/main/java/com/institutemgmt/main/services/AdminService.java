@@ -1,7 +1,9 @@
 package com.institutemgmt.main.services;
 
-import com.institutemgmt.main.entites.Admin;
-import com.institutemgmt.main.repository.AdminRepository;
+import com.institutemgmt.main.DAO.SystemStatus;
+import com.institutemgmt.main.DTO.Admin;
+import com.institutemgmt.main.DTO.Department;
+import com.institutemgmt.main.repository.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,16 @@ public class AdminService {
 
     @Autowired
     private AdminRepository repo;
+
+    @Autowired
+    private StudentRepository stRepo;
+    @Autowired
+    private TeacherRepository tRepo;
+    @Autowired
+    private ParentRepository pRepo;
+    @Autowired
+    private DepartmentRepository dRepo;
+
 
     public List<Admin> getAllAdmin(){return repo.findAll();}
 
@@ -42,6 +54,29 @@ public class AdminService {
         {
             return false;
         }
+    }
+
+    public SystemStatus returnSystemStatus()
+    {
+        SystemStatus ss = new SystemStatus();
+        ss.setTeacherNumber(tRepo.findAll().size());
+        ss.setDepartmentNumber(0);
+        ss.setParentNumber(pRepo.findAll().size());
+        ss.setClassNumber(0);
+        ss.setStudentNumber(stRepo.findAll().size());
+        return ss;
+    }
+
+    public List<Department> getAllDepartment()
+    {
+        log.info("Reading all the Department from the db");
+        return dRepo.findAll();
+    }
+
+    public boolean addDepartment(Department department){
+        dRepo.save(department);
+        log.info("Department added");
+        return true;
     }
 
     public void setPasswordResetLink()

@@ -1,6 +1,6 @@
 package com.institutemgmt.main.services;
 
-import com.institutemgmt.main.entites.Assignment;
+import com.institutemgmt.main.DTO.Assignment;
 import com.institutemgmt.main.repository.AssignmentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,6 @@
 package com.institutemgmt.main.services;
 
-import com.institutemgmt.main.entites.Classes;
-import com.institutemgmt.main.entites.Teacher;
+import com.institutemgmt.main.DTO.Classes;
 import com.institutemgmt.main.repository.ClassRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

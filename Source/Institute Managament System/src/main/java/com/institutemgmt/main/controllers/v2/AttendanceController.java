@@ -1,15 +1,5 @@
 package com.institutemgmt.main.controllers.v2;
 
-import com.institutemgmt.main.entites.Classes;
-import com.institutemgmt.main.services.ClassService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
-
 /*@RestController
 @RequestMapping(value = "api/v2/assignment")
 @Api("Handles the class details")*/

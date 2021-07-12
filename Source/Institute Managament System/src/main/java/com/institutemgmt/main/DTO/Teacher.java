@@ -1,11 +1,10 @@
-package com.institutemgmt.main.entites;
+package com.institutemgmt.main.DTO;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

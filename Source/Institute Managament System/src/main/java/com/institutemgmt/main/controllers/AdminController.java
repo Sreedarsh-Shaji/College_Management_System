@@ -1,14 +1,15 @@
 package com.institutemgmt.main.controllers;
 
-import com.institutemgmt.main.entites.Admin;
+import com.institutemgmt.main.DAO.Message;
+import com.institutemgmt.main.DTO.Admin;
+import com.institutemgmt.main.DTO.Department;
 import com.institutemgmt.main.services.AdminService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import com.institutemgmt.main.DAO.SystemStatus;
 
 @Slf4j
 @RestController
@@ -32,8 +33,8 @@ public class AdminController {
         return service.getAllAdmin();
     }
 
-    @RequestMapping(method = RequestMethod.GET,value = "/admin/login/{username}/{password}")
-    public String adminLogin(@PathVariable("username") String username ,@PathVariable("password") String password){
+  @RequestMapping(method = RequestMethod.GET,value = "/admin/login/{username}/{password}")
+    public String adminLogin(@PathVariable("username") String username,@PathVariable("password") String password){
         List<Admin> results = null;
 
         results = service.getByUserPwd(username, password);
@@ -54,5 +55,24 @@ public class AdminController {
         service.setPasswordResetLink();
     }
 
+    @RequestMapping(method = RequestMethod.PUT,value = "/return_system_status")
+    public SystemStatus getSystemStatus()
+    {
+        return  service.returnSystemStatus();
+    }
 
+    @RequestMapping(method = RequestMethod.GET,value = "/return_all_departments")
+    public List<?> getAllDepartments()
+    {
+        return  service.getAllDepartment();
+    }
+
+    @RequestMapping(method = RequestMethod.POST,value = "/add_department")
+    public Message addDepartment(@RequestBody Department department)
+    {
+        service.addDepartment(department);
+        Message temp = (new Message());
+        temp.setMessageContent("Successfully inserted");
+        return temp;
+    }
 }

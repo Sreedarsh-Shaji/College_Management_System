@@ -1,6 +1,6 @@
 package com.institutemgmt.main.controllers;
 
-import com.institutemgmt.main.entites.Teacher;
+import com.institutemgmt.main.DTO.Teacher;
 import com.institutemgmt.main.services.ParentService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;

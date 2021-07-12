@@ -1,6 +1,6 @@
 package com.institutemgmt.main.controllers.v2;
 
-import com.institutemgmt.main.entites.Classes;
+import com.institutemgmt.main.DTO.Classes;
 import com.institutemgmt.main.services.ClassService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

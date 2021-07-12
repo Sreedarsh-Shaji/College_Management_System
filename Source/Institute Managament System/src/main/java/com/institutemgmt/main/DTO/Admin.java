@@ -1,4 +1,4 @@
-package com.institutemgmt.main.entites;
+package com.institutemgmt.main.DTO;
 
 import lombok.*;
 

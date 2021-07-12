@@ -1,8 +1,6 @@
 package com.institutemgmt.main.services;
 
-import com.institutemgmt.main.entites.Assignment;
-import com.institutemgmt.main.entites.Department;
-import com.institutemgmt.main.repository.AssignmentRepository;
+import com.institutemgmt.main.DTO.Department;
 import com.institutemgmt.main.repository.DepartmentRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +16,7 @@ public class DepartmentService {
     @Autowired
     DepartmentRepository repo;
 
-    public boolean addDepartment(Department department){
-        repo.save(department);
-        log.info("Department added");
-        return true;
-    }
+
 
     public List<Department> getAllDepartment()
     {
