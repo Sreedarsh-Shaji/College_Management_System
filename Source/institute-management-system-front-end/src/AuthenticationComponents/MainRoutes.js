@@ -15,6 +15,9 @@ import AddClasses from '../AdminAccount/AddClasses';
 import AddStudent from '../AdminAccount/AddStudent';
 import AddParent from '../AdminAccount/AddParent';
 
+import TeacherHomePage from '../Teacher/TeacherHomePage';
+import AddSession from '../Teacher/AddSession';
+
 class MainRoutes extends Component {
     render() {
         return (
@@ -37,7 +40,9 @@ class MainRoutes extends Component {
                         <Route path="/Admin/add_students" component={AddStudent}/>
                         <Route path="/Admin/add_parent" component={AddParent}/>
                         
-
+                        { /* Teacher components */ }
+                        <Route path="/Teacher/Home" component={TeacherHomePage}/>
+                        <Route path="/Teacher/add_session" component={AddSession}/>
 
 
                     </Switch>

@@ -31,10 +31,14 @@ public class Session {
 
     @Getter
     @Setter
-    int classType;
+    String time;
 
     @Getter
     @Setter
     int period;
+
+    @Getter
+    @Setter
+    String urlToSession;
 
 }

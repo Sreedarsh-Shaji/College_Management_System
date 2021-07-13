@@ -1,6 +1,9 @@
 package com.institutemgmt.main.controllers;
 
+import com.institutemgmt.main.DTO.Admin;
+import com.institutemgmt.main.DTO.Session;
 import com.institutemgmt.main.DTO.Teacher;
+import com.institutemgmt.main.services.SessionService;
 import com.institutemgmt.main.services.TeacherService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +22,9 @@ public class TeacherController {
 
     @Autowired
     TeacherService service;
+
+    @Autowired
+    SessionService sessionService;
 
     @RequestMapping(method = RequestMethod.POST,value = "/add")
     public boolean addTeacher(@RequestBody Teacher teacher)
@@ -55,5 +61,39 @@ public class TeacherController {
         service.updateTeacher(teacher);
         return null;
     }
+
+    @RequestMapping(method = RequestMethod.GET,value = "/teacher/login/{username}/{password}")
+    public Teacher teacherLogin(@PathVariable("username") String username,@PathVariable("password") String password){
+        List<Teacher> results = null;
+
+        results = service.getByMailPwd(username, password);
+
+        return results.size()<=0?null:results.get(0);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT,value = "/get_teacher/{id}")
+    public Teacher getTeacherById(@PathVariable int id)
+    {
+        List<Teacher> teachers = service.getAllTeachers();
+        Teacher result = null;
+        for(Teacher teacher: teachers)
+        {
+            if(teacher.getTeacher_id()==id)
+            {
+                result = teacher;
+                break;
+            }
+        }
+        return result;
+    }
+
+
+    @PostMapping("/add_session")
+    public boolean addSession(@RequestBody Session session)
+    {
+        sessionService.addSession(session);
+        return true;
+    }
+
 
 }

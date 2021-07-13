@@ -1,3 +1,5 @@
+import Cookies from 'universal-cookie';
+
 class AuthenticationService{
 
     registerSuccessfulAdminLogin(admin)//Registers admin login
@@ -7,10 +9,13 @@ class AuthenticationService{
     }
 
     
-    registerSuccessfulAgencyLogin(agency)//Registers agency login
+    registerSuccessfulTeacherLogin(teacher)//Registers agency login
     {
-        console.log("Register successful agency login");
-        sessionStorage.setItem('authenticatedAgency',agency);
+        console.log("Register successful teacher login");
+        console.log(teacher);
+        sessionStorage.setItem('authenticatedTeacher',teacher);
+        const cookies = new Cookies();
+        cookies.set('teacher-id', teacher, { path: '/' });
     }
 
     isAdminLoggedIn()//Return true if admin is logged in
@@ -19,9 +24,9 @@ class AuthenticationService{
         return user === null ? false : true ;
     }
 
-    isAgencyLoggedIn()//Return true if agency is logged in
+    isTeacherLoggedIn()//Return true if agency is logged in
     { 
-        let user = sessionStorage.getItem('authenticatedAgency');
+        let user = sessionStorage.getItem('authenticatedTeacher');
         return user === null ? false : true ;
     }
 
@@ -31,32 +36,38 @@ class AuthenticationService{
         sessionStorage.removeItem('authenticatedAdmin');
     }
 
-    agencyLogout()//Removes agency entity
+    teacherLogout()//Removes agency entity
     {
-        sessionStorage.removeItem('authenticatedAgency');
+        sessionStorage.removeItem('authenticatedTeacher');
     }
 
-    logout()
-    {
-        sessionStorage.removeItem('authenticatedUser');
-    } 
+    // logout()
+    // {
+    //     sessionStorage.removeItem('authenticatedUser');
+    // } 
     
-    logoutAdmin()
-    {
-        sessionStorage.removeItem('authenticatedUser');
-    }
+    // logoutAdmin()
+    // {
+    //     sessionStorage.removeItem('authenticatedUser');
+    // }
 
     
-    isUserLoggedIn()
-    { 
-        let user = sessionStorage.getItem('authenticatedUser');
-        return user === null ? false : true ;
-    }
+    // isUserLoggedIn()
+    // { 
+    //     let user = sessionStorage.getItem('authenticatedUser');
+    //     return user === null ? false : true ;
+    // }
 
-     getLoggedinUsername()
-     {
-         return sessionStorage.getItem('authenticatedUser');;
-     }
+    //  getLoggedinUsername()
+    //  {
+    //      return sessionStorage.getItem('authenticatedUser');;
+    //  }
+
+    getLoggedinTeacher()
+    {
+        let currentTeacher = sessionStorage.getItem('authenticatedTeacher');
+        console.log(currentTeacher);
+    }
 
 }
 

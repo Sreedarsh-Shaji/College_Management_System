@@ -1,5 +1,6 @@
 package com.institutemgmt.main.services;
 
+import com.institutemgmt.main.DTO.Admin;
 import com.institutemgmt.main.DTO.Teacher;
 import com.institutemgmt.main.repository.TeacherRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -47,5 +48,15 @@ public class TeacherService {
         repo.save(teacher);
         return true;
     }
+
+    public List<Teacher> getByUserPwd(String username, String password){
+        return repo.findByNameAndPassword(username,password);
+    }
+
+    public List<Teacher> getByMailPwd(String mail,String password){
+        return repo.findByEmailAndPassword(mail,password);
+    }
+
+
 
 }

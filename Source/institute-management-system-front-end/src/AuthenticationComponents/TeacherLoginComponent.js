@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import AuthenticationDataService from './AuthenticationDataService';
 import AuthenticationService from './AuthenticationService';
 
@@ -24,15 +25,15 @@ class TeacherLoginComponent extends Component {
 
         const { history } = this.props;
 
-        AuthenticationDataService.adminLogin(this.state.username, this.state.password)
+        AuthenticationDataService.teacherLogin(this.state.username, this.state.password)
             .then((response) => {
-                AuthenticationService.registerSuccessfulAdminLogin(response.data);
-                if (response.data.adminEmail == null) {
+                AuthenticationService.registerSuccessfulTeacherLogin(response.data);
+                if (response.data.teacher_id == null) {
                     this.setState({ error: "Invalid credentials" })
                 }
                 else {
                     this.setState({ error: "Valid credentials" })
-                    history.push('/Admin/Home');
+                    history.push('/Teacher/Home');
                 }
                 console.log(response.data)
             })
@@ -57,7 +58,12 @@ class TeacherLoginComponent extends Component {
     render() {
         return (
             <>
-                <div className="container login-style">
+                
+                    
+
+                    
+                <div className="container login-style login-div">
+
                     <div className="row">
                         <div className="col-md-3"></div>
                         <div className="col-md-6 heading-div"> TEACHER </div>
@@ -66,25 +72,43 @@ class TeacherLoginComponent extends Component {
                     <div className="row">
                         <div className="col-md-3"></div>
                         <div className="col-md-6 Signup-div">
-                            <form>
                                 <h3>Sign In</h3>
 
                                 <div className="form-group">
                                     <label>Email address</label>
-                                    <input type="email" className="form-control" placeholder="Enter email" />
+                                    <input type="email" className="form-control" name="username" placeholder="Enter email" onChange={this.handleChange}/>
                                 </div>
 
                                 <div className="form-group">
                                     <label>Password</label>
-                                    <input type="password" className="form-control" placeholder="Enter password" />
+                                    <input type="password" className="form-control" name="password"  placeholder="Enter password" onChange={this.handleChange}/>
                                 </div>
 
-                                <button type="submit" className="btn btn-primary btn-block">Submit</button>
-                            </form>
+                                <div className="form-group">
+                                    <strong>New user !</strong> Initial password is dob in yyyy-mm-dd format!
+                                </div>
+
+                                <button type="submit" className="btn btn-primary btn-block" onClick={this.onSubmit}>Submit</button>
+                            
                         </div>
                         <div className="col-md-3"></div>
                     </div>
                 </div>
+
+                
+                <div className="row failure-message">
+
+                    <div className="col-md-2"></div>
+                    <div className="col-md-8">
+
+                        {this.state.error && <div className="alert alert-danger" role="alert">
+                            {this.state.error}
+                        </div>}
+
+                    </div>
+                    <div className="col-md-2"></div>
+                </div>
+            
             </>
         );
     }
@@ -98,4 +122,4 @@ class TeacherLoginComponent extends Component {
 
 }
 
-export default TeacherLoginComponent;
+export default withRouter(TeacherLoginComponent);

@@ -2,6 +2,8 @@ import axios from "axios";
 
 class AuthenticationDataService{
    
+    /* ADMIN APIs */
+
     adminLogin(username,password){
         let ret = axios.get(`http://localhost:8082/api/v1/admin/admin/login/${username}/${password}`);
         return ret;
@@ -36,6 +38,14 @@ class AuthenticationDataService{
         let users = axios.get(`http://localhost:8085/api/v1/admin/viewAllVehicles`)
         return users
     }
+
+    /* Teacher APIs */
+
+    teacherLogin(username,password){
+        let ret = axios.get(`http://localhost:8082/api/v1/teacher/teacher/login/${username}/${password}`);
+        return ret;
+    } 
+
 
 }
 
