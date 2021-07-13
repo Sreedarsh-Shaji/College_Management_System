@@ -8,11 +8,12 @@ import TeacherLoginComponent from './TeacherLoginComponent';
 import StudentLoginComponent from './StudentLoginComponent';
 import ParentLoginComponent from './ParentLoginComponent';
 
-
-import AgencyHomePage from '../AgencyAccount/AgencyHomePage.js'
-import AgencyOfficesPage from '../AgencyAccount/AgencyOfficesPage.js'
 import AddDepartment from '../AdminAccount/AddDepartment';
 import ViewDepertment from '../AdminAccount/ViewDepertment'
+import AddTeacher from '../AdminAccount/AddTeacher';
+import AddClasses from '../AdminAccount/AddClasses';
+import AddStudent from '../AdminAccount/AddStudent';
+import AddParent from '../AdminAccount/AddParent';
 
 class MainRoutes extends Component {
     render() {
@@ -31,12 +32,13 @@ class MainRoutes extends Component {
                         <Route path="/Admin/Home" component={AdminHomePage}/>
                         <Route path="/Admin/add_dept" component={AddDepartment}/>
                         <Route path="/Admin/view-department" component={ViewDepertment}/>
+                        <Route path="/Admin/add_teacher" component={AddTeacher}/>
+                        <Route path="/Admin/add_classes" component={AddClasses}/>
+                        <Route path="/Admin/add_students" component={AddStudent}/>
+                        <Route path="/Admin/add_parent" component={AddParent}/>
                         
 
 
-                        { /* Agency components */ }
-                        <Route path="/Agency/Home" component={AgencyHomePage}/>
-                        <Route path="/Agency/Offices" component={AgencyOfficesPage}/>
 
                     </Switch>
                 </Router>

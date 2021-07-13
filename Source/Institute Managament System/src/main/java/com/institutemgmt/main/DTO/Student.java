@@ -46,4 +46,8 @@ public class Student {
     @Setter
     String phone_no;
 
+    @Getter
+    @Setter
+    int std_class;
+
 }

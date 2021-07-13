@@ -28,10 +28,6 @@ public class Classes {
 
     @Getter
     @Setter
-    int classTeacher;
-
-    @Getter
-    @Setter
     int maxStrength;
 
 }

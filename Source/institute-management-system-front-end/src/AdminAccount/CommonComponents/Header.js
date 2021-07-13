@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthenticationService from '../../AuthenticationComponents/AuthenticationService';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Redirect } from 'react-router'
 
 import './Style.css';
@@ -31,4 +31,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);

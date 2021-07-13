@@ -44,7 +44,6 @@ public class Parent {
 
     @Getter
     @Setter
-    @OneToOne
-    Student student;
+    int student;
 
 }

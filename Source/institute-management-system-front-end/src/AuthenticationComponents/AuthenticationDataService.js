@@ -7,6 +7,12 @@ class AuthenticationDataService{
         return ret;
     } 
 
+    adminSeeAllDepartments()
+    {
+        let ret = axios.get(`http://localhost:8082/api/v1/admin/return_all_departments`)
+        return ret
+    }
+
     getAllusers()
     {
         let users = axios.get(`http://localhost:8085/api/v1/admin/viewAllUser`)

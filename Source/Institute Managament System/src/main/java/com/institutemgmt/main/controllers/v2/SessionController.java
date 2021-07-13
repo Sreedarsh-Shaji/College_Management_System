@@ -1,11 +1,20 @@
 package com.institutemgmt.main.controllers.v2;
 
-/*@RestController
-@RequestMapping(value = "api/v2/assignment")
-@Api("Handles the class details")*/
+import com.institutemgmt.main.DTO.Classes;
+import com.institutemgmt.main.services.ClassService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
+
+@RestController
+@RequestMapping(value = "api/v2/session")
+@Api("Handles the session details")
 public class SessionController {
 
-  /*  @Autowired
+    @Autowired
     ClassService service;
 
     @RequestMapping(method = RequestMethod.POST , value = "/add")
@@ -25,9 +34,9 @@ public class SessionController {
 
     @RequestMapping(method = RequestMethod.GET,value = "/getAll")
     @ApiOperation("Returns all the class in the system")
-    public List getAllTeachers()
+    public boolean getAllTeachers()
     {
-        return service.getAllClasses();
+        return service.getAllClasses().size()>0?true:false;
     }
 
     @RequestMapping(method = RequestMethod.DELETE,value = "/delete/{id}")
@@ -44,6 +53,6 @@ public class SessionController {
     {
         service.updateClasses(classes);
         return null;
-    }*/
+    }
 
 }

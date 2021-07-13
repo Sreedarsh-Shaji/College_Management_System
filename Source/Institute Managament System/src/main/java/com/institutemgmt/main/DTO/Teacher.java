@@ -46,15 +46,6 @@ public class Teacher {
     @Setter
     int department;
 
-    @Getter
-    @Setter
-    @ElementCollection
-    List<Integer> subjects;
-
-    @Getter
-    @Setter
-    int staffId;
-
     public Teacher(int teacher_id, String name, String user_name, String password, String email, Date dob, String phone_no, int department, List<Integer> subjects, int staffId) {
         this.teacher_id = teacher_id;
         this.name = name;
@@ -64,8 +55,6 @@ public class Teacher {
         this.dob = dob;
         this.phone_no = phone_no;
         this.department = department;
-        this.subjects = subjects;
-        this.staffId = staffId;
     }
 
     public Teacher() {
