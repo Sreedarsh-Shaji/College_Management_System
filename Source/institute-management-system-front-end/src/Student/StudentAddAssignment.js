@@ -50,7 +50,7 @@ class StudentAddAssignment extends Component {
         method: 'POST',
         body: formData
       }).then(response => response.json())
-      .then(result => console.log('Files successfully uploaded!'))
+      .then(result => alert('Files successfully uploaded!'))
       .catch(error => console.log('error occurred!')); 
     }
 
@@ -67,10 +67,10 @@ class StudentAddAssignment extends Component {
                     <div className="col-md-10 content-div">
 
                         <div className="content_holder">
-                          
+                        <h2>Upload assignment</h2><hr/>
                         <label>Upload Files</label>
                         <input type="file" onChange={(event) => this.uploadJSONFiles(event)} multiple/>
-
+                        
                         </div>
 
                     </div>
