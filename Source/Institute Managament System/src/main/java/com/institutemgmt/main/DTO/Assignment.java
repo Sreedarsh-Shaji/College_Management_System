@@ -52,4 +52,6 @@ public class Assignment {
     @Setter
     Date end;
 
+    @Getter @Setter
+    boolean open;
 }

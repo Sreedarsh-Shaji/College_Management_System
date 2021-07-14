@@ -18,6 +18,16 @@ class AuthenticationService{
         cookies.set('teacher-id', teacher, { path: '/' });
     }
 
+    
+    registerSuccessfulStudentLogin(Student)//Registers agency login
+    {
+        console.log("Register successful Student login");
+        console.log(Student);
+        sessionStorage.setItem('authenticatedStudent',Student);
+        const cookies = new Cookies();
+        cookies.set('Student', Student, { path: '/' });
+    }
+
     isAdminLoggedIn()//Return true if admin is logged in
     { 
         let user = sessionStorage.getItem('authenticatedAdmin');
@@ -30,6 +40,12 @@ class AuthenticationService{
         return user === null ? false : true ;
     }
 
+    isStudentLoggedIn()//Return true if agency is logged in
+    { 
+        let user = sessionStorage.getItem('authenticatedStudent');
+        return user === null ? false : true ;
+    }
+
 
     adminLogout()//Removes admin entity
     {
@@ -39,6 +55,11 @@ class AuthenticationService{
     teacherLogout()//Removes agency entity
     {
         sessionStorage.removeItem('authenticatedTeacher');
+    }
+
+    studentLogout()//Removes agency entity
+    {
+        sessionStorage.removeItem('authenticatedStudent');
     }
 
     // logout()

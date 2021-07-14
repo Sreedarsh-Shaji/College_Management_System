@@ -47,6 +47,13 @@ class AuthenticationDataService{
     } 
 
 
+    /* Student APIs */
+
+    studentLogin(username,password){
+        let ret = axios.get(`http://localhost:8082/api/v1/admin/student_login/${username}/${password}`);
+        return ret;
+    } 
+
 }
 
 export default new AuthenticationDataService();

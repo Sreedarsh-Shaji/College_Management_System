@@ -1,7 +1,9 @@
 package com.institutemgmt.main.services;
 
 import com.institutemgmt.main.DTO.Assignment;
+import com.institutemgmt.main.DTO.Examination;
 import com.institutemgmt.main.repository.AssignmentRepository;
+import com.institutemgmt.main.repository.ExaminationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,40 +16,16 @@ import java.util.Optional;
 public class ExaminationService {
 
     @Autowired
-    AssignmentRepository repo;
+    ExaminationRepository repo;
 
-    public boolean addAssignment(Assignment assignment){
-        repo.save(assignment);
-        log.info("Assignment added");
-        return true;
+    public void addExamination(Examination exam)
+    {
+        repo.save(exam);
     }
 
-    public List<Assignment> getAllAssignment()
+    public List<Examination> seeAllExams()
     {
-        log.info("Reading all the assignment from the db");
         return repo.findAll();
-    }
-
-    public Optional<Assignment> getAnAssignmentById(int id)
-    {
-        log.info("Returning assignment with id "+id);
-        Optional<Assignment> t = repo.findById(id);
-        return t;
-    }
-
-    public boolean deleteAnAssignmentById(int id)
-    {
-        log.info("Deleting teacher with id "+id);
-        Optional<Assignment> t = repo.findById(id);
-        repo.delete(t.orElse(null));
-        return true;
-    }
-
-    public boolean updateClasses(Assignment assignment)
-    {
-        log.info("Updating teacher "+ assignment);
-        repo.save(assignment);
-        return true;
     }
 
 }

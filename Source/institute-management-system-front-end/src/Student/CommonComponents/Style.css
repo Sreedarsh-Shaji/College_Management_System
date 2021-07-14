@@ -1,0 +1,102 @@
+.login-style{
+    position: relative;
+    top: 200px;
+}
+
+.Signup-div
+{
+    border: solid 1px black;
+    padding: 20px;
+    background-color:blanchedalmond;
+    opacity: 0.8;
+}
+
+.content-div{
+    position:relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.heading-div{
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    text-decoration: underline;
+}
+
+.failure-message{
+    position: relative;
+    top: 250px;
+}
+
+.navbar-div{
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background-color: #212529;
+}
+
+.footer{
+    top: 105%;
+}
+
+.admin-home-content-div{
+    height: 100px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.col1{
+    top: 200px;left: 300px;
+}
+
+.col2{
+    top: 200px;left: 700px;
+}
+
+
+.col3{
+    top: 200px;left: 1100px;
+}
+
+
+.col4{
+    top: 350px;left: 300px;
+}
+
+.col5{
+    top: 350px;left: 700px;
+}
+
+.col6{
+    top: 350px;left: 1100px;
+}
+
+.admin-home-content-div-txt{
+    position: relative;
+    top:30px;
+}
+
+.admin-home-content-div-number{
+    background-color: tomato;
+    text-align: right;
+    width: min-content;
+    position: relative;
+    left: 72%;
+    height: 80px;
+    width: 80px;
+    top:-30px;
+}
+
+.content_holder{
+    background-color: white;
+    position: relative;
+    top: 100px;
+    left: 210px;
+    padding: 50px;
+}

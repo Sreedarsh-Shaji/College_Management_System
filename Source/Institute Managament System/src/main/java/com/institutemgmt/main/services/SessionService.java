@@ -6,6 +6,8 @@ import com.institutemgmt.main.repository.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SessionService {
 
@@ -19,4 +21,6 @@ public class SessionService {
     {
         sessionRepository.save(session);
     }
+
+    public List<Session> getAllSessions(){ return sessionRepository.findAll(); }
 }

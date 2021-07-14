@@ -1,8 +1,8 @@
 package com.institutemgmt.main.controllers;
 
-import com.institutemgmt.main.DTO.Admin;
-import com.institutemgmt.main.DTO.Session;
-import com.institutemgmt.main.DTO.Teacher;
+import com.institutemgmt.main.DTO.*;
+import com.institutemgmt.main.services.AssignmentService;
+import com.institutemgmt.main.services.ExaminationService;
 import com.institutemgmt.main.services.SessionService;
 import com.institutemgmt.main.services.TeacherService;
 import io.swagger.annotations.ApiOperation;
@@ -25,6 +25,12 @@ public class TeacherController {
 
     @Autowired
     SessionService sessionService;
+
+    @Autowired
+    AssignmentService assignmentService;
+
+    @Autowired
+    ExaminationService examinationService;
 
     @RequestMapping(method = RequestMethod.POST,value = "/add")
     public boolean addTeacher(@RequestBody Teacher teacher)
@@ -92,6 +98,20 @@ public class TeacherController {
     public boolean addSession(@RequestBody Session session)
     {
         sessionService.addSession(session);
+        return true;
+    }
+
+    @PostMapping("/add_assignment")
+    public boolean addAssignment(@RequestBody Assignment assignment)
+    {
+        assignmentService.addAssignment(assignment);
+        return true;
+    }
+
+    @PostMapping("/add_exam")
+    public boolean addExam(@RequestBody Examination examination)
+    {
+        examinationService.addExamination(examination);
         return true;
     }
 

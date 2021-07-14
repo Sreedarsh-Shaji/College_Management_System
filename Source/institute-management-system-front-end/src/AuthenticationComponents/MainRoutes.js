@@ -17,6 +17,13 @@ import AddParent from '../AdminAccount/AddParent';
 
 import TeacherHomePage from '../Teacher/TeacherHomePage';
 import AddSession from '../Teacher/AddSession';
+import AddAssignment from '../Teacher/AddAssignment';
+import AddExamSchedule from '../Teacher/AddExamSchedule';
+import StudentHome from '../Student/StudentHome';
+import ViewAllSessions from '../Student/ViewAllSessions';
+import ViewAllExams from '../Student/ViewAllExams';
+import ViewAllAssignments from '../Student/ViewAllAssignments';
+import StudentAddAssignment from '../Student/StudentAddAssignment';
 
 class MainRoutes extends Component {
     render() {
@@ -43,7 +50,15 @@ class MainRoutes extends Component {
                         { /* Teacher components */ }
                         <Route path="/Teacher/Home" component={TeacherHomePage}/>
                         <Route path="/Teacher/add_session" component={AddSession}/>
+                        <Route path="/Teacher/add_assignemnt" component={AddAssignment}/>
+                        <Route path="/Teacher/add_exam_schedule" component={AddExamSchedule}/>
 
+                        { /* Student components */ }
+                        <Route path="/Student/Home" component={StudentHome}/>
+                        <Route path="/Student/view_sessions" component={ViewAllSessions}/>
+                        <Route path="/Student/view_exams" component={ViewAllExams}/>
+                        <Route path="/Student/view_assignments" component={ViewAllAssignments}/>
+                        <Route path="/Student/add_assignments" component={StudentAddAssignment}/>
 
                     </Switch>
                 </Router>

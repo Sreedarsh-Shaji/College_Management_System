@@ -7,6 +7,8 @@ import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 import java.util.List;
 import com.institutemgmt.main.DAO.SystemStatus;
 
@@ -29,9 +31,20 @@ public class AdminController {
     @Autowired
     private ParentService parentService;
 
+    @Autowired
+    private SessionService sessionService;
+
+    @Autowired
+    private ExaminationService examinationService;
 
     @Autowired
     private ClassService classService;
+
+    @Autowired
+    private AssignmentService assignmentService;
+
+    @Autowired
+    private AttendanceService attendanceService;
 
     @RequestMapping(method = RequestMethod.GET,value = "/hello")
     public String hello()
@@ -131,4 +144,60 @@ public class AdminController {
         parentService.addParent(parent);
         return false;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*********************************************************************************************/
+    /**************************************This is the student part ******************************/
+    /*********************************************************************************************/
+
+
+    @GetMapping("/student_login/{username}/{password}")
+    public Student studentLogin(@PathVariable String username,@PathVariable String password)
+    {
+        return studentService.studentLogin(username, password);
+    }
+
+    @GetMapping("/see_all_sessions")
+    public List<?> getSession()
+    {
+        return sessionService.getAllSessions();
+    }
+
+    @GetMapping("/see_all_exams")
+    public List<?> getExams()
+    {
+        return examinationService.seeAllExams();
+    }
+
+    @GetMapping("/see_all_assignments")
+    public List<?> getAssignments()
+    {
+        return assignmentService.getAllAssignment();
+    }
+
+
+    @PostMapping("/add_attendance/{student_id}/{session_id}")
+    public void addAttendance(@PathVariable int student_id,@PathVariable int session_id)
+    {
+        Attendance attendance = new Attendance();
+        attendance.setSessionId(session_id);
+        attendance.setStudentId(student_id);
+        attendance.setTimeOfJoin(new Date().toString());
+        attendanceService.addAtt(attendance);
+    }
+
 }

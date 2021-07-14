@@ -123,6 +123,47 @@ class AdminAuthDataService {
         return ret;
     }
 
+    addAssignment(inputData)
+    {
+        const cookies = new Cookies();
+        let teacher_id = cookies.get('teacher-id').teacher_id
+        
+        let data = {
+            classId: 0,
+            description: inputData.description,
+            end: inputData.start,
+            id: 0,
+            open: true,
+            session: 0,
+            start: inputData.end,
+            subject: 0,
+            teacher: teacher_id,
+            title: inputData.name,
+          }
+
+        let ret = axios.post(`http://localhost:8082/api/v1/teacher/add_assignment`, data);
+        return ret;
+    }
+
+    addExam(inputData)
+    {
+        const cookies = new Cookies();
+        let teacher_id = cookies.get('teacher-id').teacher_id
+        
+        let data = {
+            
+                endDate: "2021-07-13T22:58:45.702Z",
+                id: 0,
+                name: inputData.name,
+                noOfTests: 0,
+                stDate: inputData.date,
+            
+          }
+
+        let ret = axios.post(`http://localhost:8082/api/v1/teacher/add_exam`, data);
+        return ret;
+    }
+
 }
 
 export default new AdminAuthDataService();

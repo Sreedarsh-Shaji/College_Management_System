@@ -27,4 +27,10 @@ public class Attendance {
     @Setter
     int sessionId;
 
+    @Getter
+    @Setter
+    String timeOfJoin;
+
+
+
 }
