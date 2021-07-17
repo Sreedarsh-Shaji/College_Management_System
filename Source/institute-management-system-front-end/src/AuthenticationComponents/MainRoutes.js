@@ -24,6 +24,8 @@ import ViewAllSessions from '../Student/ViewAllSessions';
 import ViewAllExams from '../Student/ViewAllExams';
 import ViewAllAssignments from '../Student/ViewAllAssignments';
 import StudentAddAssignment from '../Student/StudentAddAssignment';
+import Mainpage from '../LandingPage/Mainpage';
+import ViewClasses from '../AdminAccount/ViewClasses';
 
 class MainRoutes extends Component {
     render() {
@@ -33,6 +35,7 @@ class MainRoutes extends Component {
                     <Switch>
 
                         { /* Login components */ }
+                        <Route path="/" exact component={Mainpage}/>  
                         <Route path="/admin-login" exact component={AdminLoginComponent}/>  
                         <Route path="/teacher-login" exact component={TeacherLoginComponent}/>
                         <Route path="/student-login" exact component={StudentLoginComponent}/>
@@ -44,6 +47,7 @@ class MainRoutes extends Component {
                         <Route path="/Admin/view-department" component={ViewDepertment}/>
                         <Route path="/Admin/add_teacher" component={AddTeacher}/>
                         <Route path="/Admin/add_classes" component={AddClasses}/>
+                        <Route path="/Admin/view_classes" component={ViewClasses}/>
                         <Route path="/Admin/add_students" component={AddStudent}/>
                         <Route path="/Admin/add_parent" component={AddParent}/>
                         
