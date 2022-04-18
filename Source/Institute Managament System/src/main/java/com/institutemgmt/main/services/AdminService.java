@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -35,7 +36,12 @@ public class AdminService {
     }
 
     public List<Admin> getByUserPwd(String username,String password){
-        return repo.findByUserNameAndPassword(username,password);
+        List<Admin> admins =  repo.findAll();
+        admins.stream()
+                .filter( adm -> adm.getEmail().equals(username) && adm.getPassword().equals(password) )
+//                .map( adm -> {  } )
+                .collect(Collectors.toList());
+        return admins;
     }
 
     public boolean updatePassword(String email,String password)
