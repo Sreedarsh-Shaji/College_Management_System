@@ -3,7 +3,7 @@ import axios from "axios";
 class AdminAuthDataService {
 
     getSystemStatus() {
-        let ret = axios.put(`http://localhost:8082/api/v1/admin/return_system_status`);
+        let ret = axios.get(`http://localhost:8082/api/v1/admin/return_system_status`);
         return ret;
     }
 
