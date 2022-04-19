@@ -66,7 +66,7 @@ public class AdminService {
     {
         SystemStatus ss = new SystemStatus();
         ss.setTeacherNumber(tRepo.findAll().size());
-        ss.setDepartmentNumber(0);
+        ss.setDepartmentNumber(dRepo.findAll().size());
         ss.setParentNumber(pRepo.findAll().size());
         ss.setClassNumber(0);
         ss.setStudentNumber(stRepo.findAll().size());
