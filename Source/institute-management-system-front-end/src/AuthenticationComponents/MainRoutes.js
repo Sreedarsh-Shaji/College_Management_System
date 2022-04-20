@@ -35,7 +35,7 @@ class MainRoutes extends Component {
                     <Switch>
 
                         { /* Login components */ }
-                        <Route path="/" exact component={Mainpage}/>  
+                        <Route path="/" exact component={AdminLoginComponent}/>  
                         <Route path="/admin-login" exact component={AdminLoginComponent}/>  
                         <Route path="/teacher-login" exact component={TeacherLoginComponent}/>
                         <Route path="/student-login" exact component={StudentLoginComponent}/>
