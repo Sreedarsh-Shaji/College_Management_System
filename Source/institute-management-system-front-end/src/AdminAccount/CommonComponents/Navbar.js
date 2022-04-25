@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
     render() {
@@ -7,25 +6,19 @@ class Navbar extends Component {
             <div className="navbar-div">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <Link to="/Admin/Home" className="nav-link disabled">Login</Link>
+                    <a class="nav-link" href="add_dept">Department</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Department</a>
+                    <a class="nav-link" href="add_classes">Classes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Class</a>
+                    <a class="nav-link" href="add_teacher">Teacher</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Teacher</a>
+                    <a class="nav-link" href="add_students">Student</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Student</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Student</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Parent</a>
+                    <a class="nav-link" href="#">Feedback</a>
                 </li>
             </ul>
             </div>

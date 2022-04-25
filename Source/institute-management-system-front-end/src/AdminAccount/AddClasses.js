@@ -62,11 +62,11 @@ class AddClasses extends Component {
             <div>
                 <Header />
                 <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-2 navbar-div">
+                    <div className="row ">
+                        {/* <div className="col-md-2 navbar-div">
                             <Navbar />
-                        </div>
-                        <div className="col-md-10 content-div">
+                        </div> */}
+                        <div className="col-md-12 content-div">
 
                             <div className="content_holder">
                                 <h2>Add Classes</h2><hr />
