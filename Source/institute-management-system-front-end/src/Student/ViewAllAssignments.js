@@ -91,7 +91,7 @@ class ViewAllAssignments extends Component {
                                             <th>Description</th>
                                             <th>Start Date</th>
                                             <th>End Date</th>
-                                            <th>Url</th>
+                                            {/* <th>Url</th> */}
                                         </tr>
                                         {
 
@@ -105,7 +105,7 @@ class ViewAllAssignments extends Component {
                                         <td>{ session.description }</td>
                                         <td>{ session.start }</td>
                                         <td>{ session.end }</td>
-                                        <td>Upload the document</td>
+                                        {/* <td>Upload the document</td> */}
                                     </tr>)
                                     
                                     )

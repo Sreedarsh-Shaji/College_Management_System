@@ -85,7 +85,7 @@ class TeacherLoginComponent extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <strong>New user !</strong> Initial password is dob in yyyy-mm-dd format!
+                                    {/* <strong>New user !</strong> Initial password is dob in yyyy-mm-dd format! */}
                                 </div>
 
                                 <button type="submit" className="btn btn-primary btn-block" onClick={this.onSubmit}>Submit</button>
