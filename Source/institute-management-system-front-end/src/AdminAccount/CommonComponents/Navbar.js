@@ -17,9 +17,9 @@ class Navbar extends Component {
                 <li class="nav-item">
                     <a class="nav-link" href="add_students">Student</a>
                 </li>
-                <li class="nav-item">
+                {/* <li class="nav-item">
                     <a class="nav-link" href="#">Feedback</a>
-                </li>
+                </li> */}
             </ul>
             </div>
         );
