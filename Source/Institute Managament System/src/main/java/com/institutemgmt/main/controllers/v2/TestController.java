@@ -1,49 +1,32 @@
 package com.institutemgmt.main.controllers.v2;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 /*@RestController
 @RequestMapping(value = "api/v2/assignment")
 @Api("Handles the class details")*/
+@RestController
+        @RequestMapping("/mail")
 public class TestController {
 
-  /*  @Autowired
-    ClassService service;
+    @Autowired private JavaMailSender javaMailSender;
 
-    @RequestMapping(method = RequestMethod.POST , value = "/add")
-    @ApiOperation(value ="Adds the class detail to the system")
-    public boolean addClasses(@RequestBody Classes classes)
+    @GetMapping()
+    public void sendMail()
     {
-        service.addClass(classes);
-        return true;
+        SimpleMailMessage msg = new SimpleMailMessage();
+        msg.setTo("sreedarsh0039@gmail.com");
+
+        msg.setSubject("Testing from Spring Boot");
+        msg.setText("Hello World \n Spring Boot Email");
+
+        javaMailSender.send(msg);
     }
-
-    @RequestMapping(method = RequestMethod.POST,value = "/add/{id}")
-    @ApiOperation("Gets a teacher with particular id")
-    public Optional<Classes> getAClass(@PathVariable int id)
-    {
-        return service.getAClassById(id);
-    }
-
-    @RequestMapping(method = RequestMethod.GET,value = "/getAll")
-    @ApiOperation("Returns all the class in the system")
-    public List getAllTeachers()
-    {
-        return service.getAllClasses();
-    }
-
-    @RequestMapping(method = RequestMethod.DELETE,value = "/delete/{id}")
-    @ApiOperation("Returns all the teacher in the system")
-    public boolean deleteTeacher(@PathVariable int id)
-    {
-        service.deleteAClassesById(id);
-        return true;
-    }
-
-    @RequestMapping(method = RequestMethod.PUT,value = "/update")
-    @ApiOperation("Returns all the teacher in the system")
-    public String updateTeacher(@RequestBody Classes classes)
-    {
-        service.updateClasses(classes);
-        return null;
-    }*/
 
 }

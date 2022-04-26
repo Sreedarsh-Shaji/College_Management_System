@@ -22,6 +22,11 @@ class AdminAuthDataService {
         return ret
     }
 
+    adminSeeAllTeachers() {
+        let ret = axios.get(`http://localhost:8082/api/v1/teacher/getAll`)
+        return ret
+    }
+
     addDepartment(department) {
         let data = {
             "id": 0,

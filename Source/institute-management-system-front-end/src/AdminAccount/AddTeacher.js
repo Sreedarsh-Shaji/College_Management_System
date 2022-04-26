@@ -13,7 +13,8 @@ class AddTeacher extends Component {
 
         this.state = {
             id : null,name:"",dep:0,phoneNo:"",dob:"",email:"",
-            dropdowncontent : [], 
+            dropdowncontent : [],
+            selectValue : 0,
 
         }
 
@@ -25,6 +26,12 @@ class AddTeacher extends Component {
     handleChange(event)//This is a synthetic event
     {
         this.setState({[event.target.name]:event.target.value});
+        console.log(this.state);
+    }
+    
+    handleSelect(event)//This is a synthetic event
+    {
+        alert("Selected");
     }
 
 
@@ -65,9 +72,9 @@ class AddTeacher extends Component {
                 <Header />
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-2 navbar-div">
+                        {/* <div className="col-md-2 navbar-div">
                             <Navbar />
-                        </div>
+                        </div> */}
                         <div className="col-md-10 content-div">
 
                             <div className="content_holder">
@@ -87,13 +94,14 @@ class AddTeacher extends Component {
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Department Name</label>
-                                    <select type="email" class="form-control" name="dep" 
-                                    onChange={this.handleChange} value={this.state.dep} placeholder="Enter email">
+                                    <select class="form-control" name="dep" key={this.state.dep}
+                                      defaultValue={this.state.selectValue} 
+                                      onChange={this.handleChange} >
                                              {
                                           
                                           this.state.dropdowncontent.map(
                                               dept => 
-                                                <option value={dept.id}>{ dept.name }</option>
+                                                <option value={dept.id} >{ dept.name }</option>
                                               
                                           )
                                           
@@ -114,10 +122,11 @@ class AddTeacher extends Component {
                                 </div>
                                 <button type="submit" class="btn btn-primary" onClick={this.onSubmit}>Submit</button>
                             </div>
-
+                            <hr/>
                         </div>
                     </div>
                 </div>
+                
                 <Footer />
             </div>
         );

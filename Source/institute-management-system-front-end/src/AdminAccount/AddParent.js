@@ -66,9 +66,9 @@ class AddParent extends Component {
                 <Header />
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-md-2 navbar-div">
+                        {/* <div className="col-md-2 navbar-div">
                             <Navbar />
-                        </div>
+                        </div> */}
                         <div className="col-md-10 content-div">
 
                             <div className="content_holder">
