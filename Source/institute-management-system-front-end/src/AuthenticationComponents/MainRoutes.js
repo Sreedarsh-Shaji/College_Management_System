@@ -26,6 +26,7 @@ import ViewAllAssignments from '../Student/ViewAllAssignments';
 import StudentAddAssignment from '../Student/StudentAddAssignment';
 import Mainpage from '../LandingPage/Mainpage';
 import ViewClasses from '../AdminAccount/ViewClasses';
+import ViewTeacher from '../AdminAccount/ViewTeacher';
 
 class MainRoutes extends Component {
     render() {
@@ -48,6 +49,7 @@ class MainRoutes extends Component {
                         <Route path="/Admin/add_teacher" component={AddTeacher}/>
                         <Route path="/Admin/add_classes" component={AddClasses}/>
                         <Route path="/Admin/view_classes" component={ViewClasses}/>
+                        <Route path="/Admin/view_Teacher" component={ViewTeacher}/>
                         <Route path="/Admin/add_students" component={AddStudent}/>
                         <Route path="/Admin/add_parent" component={AddParent}/>
                         

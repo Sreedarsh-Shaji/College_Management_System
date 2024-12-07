@@ -1,8 +1,8 @@
 package com.institutemgmt.main.services;
 
-import com.institutemgmt.main.DTO.Admin;
 import com.institutemgmt.main.DTO.Teacher;
 import com.institutemgmt.main.repository.TeacherRepository;
+import com.institutemgmt.main.utils.RandomDataGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,12 @@ public class TeacherService {
     @Autowired
     private TeacherRepository repo;
 
+    @Autowired
+    MailSenderService mailSender;
+
     public String addTeacher(Teacher teacher){
+        teacher.setPassword(RandomDataGenerator.getRandomStringOfLength(10));
+        mailSender.sendMail(teacher.getEmail(),"Account created","Hi,\n Your account is created with username as this mail and password as "+ teacher.getPassword()+" \n Login to continue.");
         repo.save(teacher);
         return "Added new teacher";
     }

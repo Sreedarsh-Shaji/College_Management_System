@@ -35,6 +35,12 @@ class Header extends Component {
             <header>
                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                    <div><a href="#" className="navbar-brand">Teacher Home</a></div>
+                                <a class="nav-link" style={{"color":"white"}} href="/Teacher/Home">Home</a>
+                                <a class="nav-link" style={{"color":"white"}} href="/Teacher/add_session">Add session</a>
+                                <a class="nav-link" style={{"color":"white"}} href="/Teacher/add_assignemnt"> Add Assignment </a>
+                                <a class="nav-link" style={{"color":"white"}} href="/Teacher/add_exam_schedule"> Exam Schedule </a>
+                                
+            
                    <ul className="navbar-nav">
                    </ul>
                    <ul  className="navbar-nav navbar-collapse justify-content-end">
